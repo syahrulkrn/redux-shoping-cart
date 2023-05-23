@@ -3,7 +3,7 @@ import { useGetAllProductsQuery } from '../redux/features/productsApi';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/features/cartSlice';
 
-export default function About() {
+export default function Shop() {
     const { data, error, isLoading } = useGetAllProductsQuery();
     const dispatch = useDispatch();
 

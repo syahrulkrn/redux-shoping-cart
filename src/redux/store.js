@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import productSlice, { productsFetch } from "./features/productSlice";
 import { productsApi } from "./features/productsApi";
-import cartReducer from "./features/cartSlice";
+import cartReducer, { getTotalAmount } from "./features/cartSlice";
 
 const store = configureStore({
   reducer: {
@@ -15,5 +15,6 @@ const store = configureStore({
 });
 
 store.dispatch(productsFetch());
+store.dispatch(getTotalAmount());
 
 export default store;
